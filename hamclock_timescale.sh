@@ -1,6 +1,5 @@
 #!/bin/bash
-TS_URL="postgres://tsdbadmin@<your_timescale_host:port>/tsdb?sslmode=require"
-HAM_REST_URL="http://<your_hamclock_host>:8080"
+source ./hamtime.env
 
 EXCL_SAT_LIST="NO-104"
 

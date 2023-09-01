@@ -1,0 +1,250 @@
+city	lat	lon
+Durban, South Africa 	-29 	30 
+Berlin, Germany 	52 	13 
+Toronto, Ont., Can. 	43 	-79 
+Havre, Mont. 	48 	-109 
+Helena, Mont. 	46 	-112 
+St. John, N.B., Can. 	45 	-66 
+Fort Worth, Tex. 	32 	-97 
+Lewiston, Idaho 	46 	-117 
+Juneau, Alaska 	58 	-134 
+Philadelphia, Pa. 	39 	-75 
+Copenhagen, Denmark 	55 	12 
+Austin, Tex. 	30 	-97 
+Panama City, Panama 	8 	-79 
+Frankfurt, Germany 	50 	8 
+Chihuahua, Mexico 	28 	-106 
+Odessa, Ukraine 	46 	30 
+Savannah, Ga. 	32 	-81 
+Teheran, Iran 	35 	51 
+Duluth, Minn. 	46 	-92 
+Kuala Lumpur, Malaysia 	3 	101 
+Pierre, S.D. 	44 	-100 
+Singapore, Singapore 	1 	103 
+Vladivostok, Russia 	43 	132 
+St. Petersburg, Russia 	59 	30 
+Birmingham, Ala. 	33 	-86 
+Vienna, Austria 	48 	16 
+Dallas, Tex. 	32 	-96 
+Springfield, Mass. 	42 	-72 
+Richfield, Utah 	38 	-112 
+New York, N.Y. 	40 	-73 
+Jakarta, Indonesia 	-6 	106 
+Santiago, Chile 	-33 	-70 
+Nelson, B.C., Can. 	49 	-117 
+Cincinnati, Ohio 	39 	-84 
+Madrid, Spain 	40 	-3 
+Springfield, Mo. 	37 	-93 
+Hammerfest, Norway 	70 	23 
+Edmonton, Alb., Can. 	53 	-113 
+Asunción, Paraguay 	-25 	-57 
+New Orleans, La. 	29 	-90 
+Rangoon, Myanmar 	16 	96 
+Long Beach, Calif. 	33 	-118 
+Vancouver, B.C., Can. 	49 	-123 
+Santa Fe, N.M. 	35 	-105 
+Minneapolis, Minn. 	44 	-93 
+Jacksonville, Fla. 	30 	-81 
+Tulsa, Okla. 	36 	-95 
+Bremen, Germany 	53 	8 
+Phoenix, Ariz. 	33 	-112 
+Belfast, Northern Ireland 	54 	-5 
+Flagstaff, Ariz. 	35 	-111 
+Montevideo, Uruguay 	-34 	-56 
+Beijing, China 	39 	116 
+Montreal, Que., Can. 	45 	-73 
+Bordeaux, France 	44 	-0 
+Moscow, Russia 	55 	37 
+Melbourne, Australia 	-37 	144 
+Seattle, Wash. 	47 	-122 
+San Jose, Calif. 	37 	-121 
+Grand Junction, Colo. 	39 	-108 
+Wilmington, N.C. 	34 	-77 
+Wellington, New Zealand 	-41 	174 
+Kingston, Ont., Can. 	44 	-76 
+Springfield, Ill. 	39 	-89 
+Cleveland, Ohio 	41 	-81 
+Boise, Idaho 	43 	-116 
+Chicago, Ill. 	41 	-87 
+Paramaribo, Suriname 	5 	-55 
+Eastport, Maine 	44 	-67 
+Wichita, Kan. 	37 	-97 
+Calgary, Alba., Can. 	51 	-114 
+Moose Jaw, Sask., Can. 	50 	-105 
+Albuquerque, N.M. 	35 	-106 
+Detroit, Mich. 	42 	-83 
+Marseilles, France 	43 	5 
+Córdoba, Argentina 	-31 	-64 
+Montpelier, Vt. 	44 	-72 
+La Paz, Bolivia 	-16 	-68 
+Virginia Beach, Va. 	36 	-75 
+Honolulu, Hawaii 	21 	-157 
+Buffalo, N.Y. 	42 	-78 
+Sitka, Alaska 	57 	-135 
+Naples, Italy 	40 	14 
+Newcastle-on-Tyne, England 	54 	-1 
+London, England 	51 	-0 
+Budapest, Hungary 	47 	19 
+Veracruz, Mexico 	19 	-96 
+Djibouti, Djibouti 	11 	43 
+Toledo, Ohio 	41 	-83 
+Manchester, N.H. 	43 	-71 
+Klamath Falls, Ore. 	42 	-121 
+Los Angeles, Calif. 	34 	-118 
+Aberdeen, Scotland 	57 	-2 
+Buenos Aires, Argentina 	-34 	-58 
+Grand Rapids, Mich. 	42 	-85 
+Charleston, W. Va. 	38 	-81 
+Mecca, Saudi Arabia 	21 	39 
+Milwaukee, Wis. 	43 	-87 
+Montgomery, Ala. 	32 	-86 
+Pittsburgh, Pa. 	40 	-79 
+Sofia, Bulgaria 	42 	23 
+Milan, Italy 	45 	9 
+Indianapolis, Ind. 	39 	-86 
+Lincoln, Neb. 	40 	-96 
+Nairobi, Kenya 	-1 	36 
+Johannesburg, South Africa 	-26 	28 
+Sydney, Australia 	-34 	151 
+Fargo, N.D. 	46 	-96 
+Tripoli, Libya 	32 	13 
+Nome, Alaska 	64 	-165 
+Port Moresby, Papua New Guinea 	-9 	147 
+Oslo, Norway 	59 	10 
+Shanghai, China 	31 	121 
+Tampa, Fla. 	27 	-82 
+Victoria, B.C., Can. 	48 	-123 
+Prague, Czech Republic 	50 	14 
+Hamburg, Germany 	53 	10 
+Chongqing, China 	29 	106 
+Hobart, Tasmania 	-42 	147 
+New Delhi, India 	28 	77 
+Leeds, England 	53 	-1 
+Warsaw, Poland 	52 	21 
+Portland, Maine 	43 	-70 
+Louisville, Ky. 	38 	-85 
+Amsterdam, Netherlands 	52 	4 
+Denver, Colo. 	39 	-105 
+Oklahoma City, Okla. 	35 	-97 
+Brisbane, Australia 	-27 	153 
+San Diego, Calif. 	32 	-117 
+Houston, Tex. 	29 	-95 
+San Francisco, Calif. 	37 	-122 
+Roanoke, Va. 	37 	-79 
+Dubuque, Iowa 	42 	-90 
+Georgetown, Guyana 	6 	-58 
+Cape Town, South Africa 	-33 	18 
+Jackson, Miss. 	32 	-90 
+Mazatlán, Mexico 	23 	-106 
+Anchorage, Alaska 	61 	-149 
+Ottawa, Ont., Can. 	45 	-75 
+Tokyo, Japan 	35 	139 
+Edinburgh, Scotland 	55 	-3 
+Amarillo, Tex. 	35 	-101 
+Nanjing (Nanking), China 	32 	118 
+Bangkok, Thailand 	13 	100 
+Venice, Italy 	45 	12 
+Cayenne, French Guiana 	4 	-52 
+Belém, Brazil 	-1 	-48 
+Boston, Mass. 	42 	-71 
+Nagoya, Japan 	35 	136 
+Richmond, Va. 	37 	-77 
+Athens, Greece 	37 	23 
+Charleston, S.C. 	32 	-79 
+Salt Lake City, Utah 	40 	-111 
+Osaka, Japan 	34 	135 
+Ankara, Turkey 	39 	32 
+Key West, Fla. 	24 	-81 
+Nashville, Tenn. 	36 	-86 
+Carlsbad, N.M. 	32 	-104 
+Glasgow, Scotland 	55 	-4 
+Helsinki, Finland 	60 	25 
+Washington, D.C. 	38 	-77 
+Las Vegas, Nev. 	36 	-115 
+Baltimore, Md. 	39 	-76 
+Quebec, Que., Can. 	46 	-71 
+St. Louis, Mo. 	38 	-90 
+Canton, China 	23 	113 
+Rio de Janeiro, Brazil 	-22 	-43 
+Calcutta, India 	22 	88 
+Lisbon, Portugal 	38 	-9 
+Sioux Falls, S.D. 	43 	-96 
+Auckland, New Zealand 	-36 	174 
+Havana, Cuba 	23 	-82 
+Irkutsk, Russia 	52 	104 
+Bombay, India 	19 	72 
+Darwin, Australia 	-12 	130 
+Mexico City, Mexico 	19 	-99 
+Des Moines, Iowa 	41 	-93 
+Omaha, Neb. 	41 	-95 
+Newark, N.J. 	40 	-74 
+San Antonio, Tex. 	29 	-98 
+Perth, Australia 	-31 	115 
+Iquique, Chile 	-20 	-70 
+Lima, Peru 	-12 	-77 
+Liverpool, England 	53 	-3 
+Rome, Italy 	41 	12 
+Reno, Nev. 	39 	-119 
+Providence, R.I. 	41 	-71 
+Baker, Ore. 	44 	-117 
+El Paso, Tex. 	31 	-106 
+Plymouth, England 	50 	-4 
+Algiers, Algeria 	36 	3 
+Memphis, Tenn. 	35 	-90 
+Stockholm, Sweden 	59 	18 
+Eugene, Ore. 	44 	-123 
+New Haven, Conn. 	41 	-72 
+Charlotte, N.C. 	35 	-80 
+Miami, Fla. 	25 	-80 
+Manila, Philippines 	14 	120 
+Columbia, S.C. 	34 	-81 
+Kansas City, Mo. 	39 	-94 
+Raleigh, N.C. 	35 	-78 
+Oakland, Calif. 	37 	-122 
+Mobile, Ala. 	30 	-88 
+El Centro, Calif. 	32 	-115 
+Hong Kong, China 	22 	114 
+Salvador, Brazil 	-12 	-38 
+San Juan, P.R. 	18 	-66 
+Guatemala City, Guatemala 	14 	-90 
+Dakar, Senegal 	14 	-17 
+Bangor, Maine 	44 	-68 
+Kingston, Jamaica 	17 	-76 
+Birmingham, England 	52 	-1 
+Hot Springs, Ark. 	34 	-93 
+São Paulo, Brazil 	-23 	-46 
+Paris, France 	48 	2 
+Atlanta, Ga. 	33 	-84 
+Zürich, Switzerland 	47 	8 
+Adelaide, Australia 	-34 	138 
+Spokane, Wash. 	47 	-117 
+Reykjavík, Iceland 	64 	-21 
+Bristol, England 	51 	-2 
+Barcelona, Spain 	41 	2 
+Bucharest, Romania 	44 	26 
+Munich, Germany 	48 	11 
+Brussels, Belgium 	50 	4 
+Nagasaki, Japan 	32 	129 
+Lyons, France 	45 	4 
+Fresno, Calif. 	36 	-119 
+Bogotá, Colombia 	4 	-74 
+Knoxville, Tenn. 	35 	-83 
+Bismarck, N.D. 	46 	-100 
+Idaho Falls, Idaho 	43 	-112 
+Winnipeg, Man., Can. 	49 	-97 
+Caracas, Venezuela 	10 	-67 
+Columbus, Ohio 	40 	-83 
+Guayaquil, Ecuador 	-2 	-79 
+Albany, N.Y. 	42 	-73 
+Kinshasa, Congo 	-4 	15 
+Sacramento, Calif. 	38 	-121 
+Cheyenne, Wyo. 	41 	-104 
+Belgrade, Serbia 	44 	20 
+Portland, Ore. 	45 	-122 
+London, Ont., Can. 	43 	-81 
+Tananarive, Madagascar 	-18 	47 
+Dublin, Ireland 	53 	-6 
+Shreveport, La. 	32 	-93 
+Manchester, England 	53 	-2 
+Syracuse, N.Y. 	43 	-76 
+Cairo, Egypt 	30 	31 

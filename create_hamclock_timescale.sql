@@ -10,6 +10,13 @@ create table satellite_metrics (
 
 select create_hypertable('satellite_metrics', 'at_time');
 
+alter table satellite_metrics set (timescaledb.compress,
+	timescaledb.compress_orderby = 'at_time DESC',
+	timescaledb.compress_segmentby = 'm_sat_name');
+
+select remove_compression_policy('satellite_metrics');
+select add_compression_policy('satellite_metrics', interval '1 week');
+
 drop table if exists satellite_pass_predictions;
 
 create table satellite_pass_predictions (
@@ -25,6 +32,13 @@ create table satellite_pass_predictions (
 	p_up_duration text);
 
 select create_hypertable('satellite_pass_predictions', 'at_time');
+
+alter table satellite_pass_predictions set (timescaledb.compress,
+	timescaledb.compress_orderby = 'at_time DESC',
+	timescaledb.compress_segmentby = 'p_sat_name');
+
+select remove_compression_policy('satellite_pass_predictions');
+select add_compression_policy('satellite_pass_predictions', interval '1 week');
 
 create or replace function ins_sat_metric (
 	in_m_sat_name text,
@@ -77,6 +91,11 @@ and replace(s.m_value, ' km', '') ~ '^[0-9\.]+$'
 group by 1, 2
 with no data;
 
+select add_continuous_aggregate_policy('satellite_min_range_per_hour'
+    , start_offset => interval '1 week'
+    , end_offset => interval '1 day'
+    , schedule_interval => interval '1 hour');
+
 create or replace view v_satellite_min_range_per_hour as
 with c as (
 	    select time_bucket_1h, min(min_range) c_range
@@ -87,6 +106,110 @@ from satellite_min_range_per_hour s
 join c on c.time_bucket_1h = s.time_bucket_1h
 and c.c_range = s.min_range
 order by s.time_bucket_1h desc, s.sat_name;
+
+create table major_world_cities_lat_long (city text, lat_1 text, lat_2 text, lon_1 text, lon_2 text, time text);
+
+create table major_na_cities_lat_long (city text, lat_1 text, lat_2 text, lon_1 text, lon_2 text, time text);
+/**
+-- get data from and save to csv: https://www.infoplease.com/geography/major-cities-latitude-longitude-and-corresponding-time-zones
+-- fix header, then
+\copy major_world_cities_lat_long from ./major_world_cities_lat_long.csv with (format csv, delimiter E'\t', header);
+
+\copy major_na_cities_lat_long from ./major_na_cities_lat_long.csv with (format csv, delimiter E'\t', header);
+**/
+
+create or replace view v_major_cities_lat_long as (
+with c as (
+select floor(10000*random()) ord, city
+    , lat_1 lat, '-' || lon_1 lon
+from major_na_cities_lat_long
+union all
+select floor(10000*random()) ord, city
+    , case when lat_2 like '%S%' then '-' else '' end || lat_1 lat
+    , case when lon_2 like '%W%' then '-' else '' end || lon_1 lon
+from major_world_cities_lat_long
+order by ord )
+select city, lat, lon from c);
+
+create table dx_metrics (
+	client_addr inet not null default inet_client_addr(),
+	server_addr inet not null default inet_server_addr(),
+	at_time timestamptz not null default now(),
+	d_city text,
+	d_name text,
+	d_value text);
+
+select create_hypertable('dx_metrics', 'at_time');
+
+alter table dx_metrics set (timescaledb.compress,
+	timescaledb.compress_orderby = 'at_time DESC',
+	timescaledb.compress_segmentby = 'd_city');
+
+select remove_compression_policy('dx_metrics');
+select add_compression_policy('dx_metrics', interval '1 week');
+
+create or replace function ins_dx_metric (
+	in_d_city text,
+	in_d_name text,
+	in_d_value text )
+returns setof dx_metrics
+language plpgsql
+as $_$
+begin
+	return query
+	insert into dx_metrics (d_city, d_name, d_value)
+	values (trim(in_d_city), trim(in_d_name), trim(in_d_value))
+	returning * ;
+end;
+$_$;
+
+create table livespots (
+	client_addr inet not null default inet_client_addr(),
+	server_addr inet not null default inet_server_addr(),
+	at_time timestamptz not null default now(),
+	age_s integer,
+	txcall text,
+	txgrid text,
+	rxcall text,
+	rxgrid text,
+	s_mode text,
+	lat decimal,
+	lng decimal,
+	hz integer,
+	snr integer );
+
+select create_hypertable('livespots', 'at_time');
+
+alter table livespots set (timescaledb.compress,
+	timescaledb.compress_orderby = 'at_time DESC',
+	timescaledb.compress_segmentby = 'txcall');
+
+select remove_compression_policy('livespots');
+select add_compression_policy('livespots', interval '1 week');
+
+create table ontheair (
+	client_addr inet not null default inet_client_addr(),
+	server_addr inet not null default inet_server_addr(),
+	at_time timestamptz not null default now(),
+	khz real,
+	call text,
+	utc text,
+	mode text,
+	grid text,
+	lat decimal,
+	lng decimal,
+	dedist text,
+	debearing text,
+	ext text);
+
+select create_hypertable('ontheair', 'at_time');
+
+alter table ontheair set (timescaledb.compress,
+	timescaledb.compress_orderby = 'at_time DESC',
+	timescaledb.compress_segmentby = 'call');
+
+select remove_compression_policy('ontheair');
+select add_compression_policy('ontheair', interval '1 week');
 
 create or replace function str_day_dow(in_str text)
 returns int
