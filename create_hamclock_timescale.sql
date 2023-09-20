@@ -163,6 +163,30 @@ begin
 end;
 $_$;
 
+drop materialized view if exists dx_metrics_city_avg_temp_f_per_day;
+
+create materialized view dx_metrics_city_avg_temp_f_per_day
+with (timescaledb.continuous) as
+select time_bucket('1 day'::interval, m.at_time) as time_bucket_1d,
+	m.d_city,
+	count(1) as count_d,
+	round(avg((replace(m.d_value, ' F'::text, ''::text))::numeric(4,1)), 1) as avg_temp_f,
+	round((average(time_weight('Linear'::text, m.at_time, ((replace(m.d_value, ' F'::text, ''::text))::numeric(4,1))::double precision)))::numeric, 1) as twa_temp,
+	min(((replace(m.d_value, ' F'::text, ''::text))::numeric(4,1))::numeric) as low_temp_f,
+	max(((replace(m.d_value, ' F'::text, ''::text))::numeric(4,1))::numeric) as high_temp_f,
+	first(((replace(m.d_value, ' F'::text, ''::text))::numeric(4,1))::numeric, m.at_time) as first_temp_f,
+	last(((replace(m.d_value, ' F'::text, ''::text))::numeric(4,1))::numeric, m.at_time) as last_temp_f
+	from dx_metrics m
+where ((m.d_name = 'DX_WxTemp'::text) and (m.d_value ~~ '% F'::text) and (m.at_time >= (now() - '7 mons'::interval)))
+group by (time_bucket('1 day'::interval, m.at_time)), m.d_city
+order by (time_bucket('1 day'::interval, m.at_time)) desc, m.d_city
+with no data;
+
+select add_continuous_aggregate_policy('dx_metrics_city_avg_temp_f_per_day'
+	, start_offset => interval '1 week'
+	, end_offset => interval '1 day'
+	, schedule_interval => interval '1 hour');
+
 create table livespots (
 	client_addr inet not null default inet_client_addr(),
 	server_addr inet not null default inet_server_addr(),
